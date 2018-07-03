@@ -1,0 +1,172 @@
+// bower:scss
+// endbower
+
+@font-face 
+  font-family: Simplifica
+  src:  url('../fonts/simplifica/simplifica-Typeface.ttf'),
+
+@font-face 
+  font-family: Monaco
+  src:  url('./../fonts/monaco.ttf'),
+
+@font-face 
+  font-family: Consolas
+  src:  url('./../fonts/CONSOLA.TTF'),
+
+$green: #4caf50
+$white: #fff
+$blue: #00E5FF
+
+*
+  font-family: 'Simplifica'
+
+html 
+  height: 100%
+  width: 100%
+
+body 
+  margin: 0
+  
+.bold
+  font-weight: 700
+
+.grid-flex
+  display: flex
+  flex-flow: row wrap
+
+.center
+  align-items: center
+  justify-content: center
+
+.column
+  flex-flow: column nowrap
+  
+.home
+  height: 100vh
+  width: 100%
+
+.no-visible
+  display: none
+
+.background-image
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+
+.brand
+  width: 100%
+  height: 100%
+  z-index: 4
+
+  &__icon-container
+    width: 50%
+    height: 100%
+    background-color: $white
+
+  &__icon
+    margin-top: 5rem
+    width: 250px
+    height: 370px
+    @extend .background-image
+
+  &__info
+    align-items: center
+    background-color: $green
+    width: 50%
+    height: 100%
+    padding-left: 4rem
+    box-sizing: border-box
+
+  &__text
+    max-width: 80%
+    font-size: 7rem
+    color: $white
+    letter-spacing: .7rem
+    line-height: 9rem
+
+.tree
+  width: 100%
+  height: 100vh
+  position: absolute
+
+.panel
+  width: 100%
+  height: calc(100vh/3)
+  opacity: .85
+  transition: all ease-in-out .3s
+  cursor: pointer
+  @extend .background-image
+
+  &:hover
+    opacity: 1.2
+
+  &_col-2
+    width: calc(100%/3)
+
+  &__icon
+    width: 120px
+    height: calc(80% - 1rem)
+
+    @extend .background-image
+  
+  &__text
+    font-size: 1.8rem
+    margin-top: 1rem
+    color: $white
+    font-weight: 800
+    letter-spacing: .7rem
+    position: absolute
+    text-transform: uppercase
+
+  &__info
+    background-color: $white
+    width: 100%
+    height: 100%
+    letter-spacing: .1rem
+    box-sizing: border-box
+    background-color: rgba(0, 0, 0, 0.85)
+    color: #f0f0f0
+    text-shadow: #000 0px 1px 0px
+    font-family: "Consolas", "Courier New", "Courier"
+    font-size: 1.45em
+    line-height: 1.40em
+    font-weight: 500
+    text-align: left
+    overflow: hidden
+
+  &__title-bar 
+    font-family: 'sans-serif'
+    font-size: 0.75rem
+    text-align: center
+    color: #000000
+    text-shadow: rgba(255, 255, 255, 0.8) 0px 1px 0px
+    background-color: #f8f8f8
+    background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc)
+    box-shadow: inset rgba(255, 255, 255, 0.7) 0px 1px 1px
+    border-bottom: #6a6a6a 1px solid
+
+  &__description
+    line-height: 1.24rem
+    font-size: .85rem
+    font-family: 'Monaco'
+    margin: auto
+    max-width: 400px
+
+    &_large
+      max-width: 650px
+      padding-top: 1rem
+
+  &__symbol
+    color: $blue
+    @extend .panel__description
+
+  &__content 
+    margin: 2rem 2rem
+
+/** 
+  ANIMATIONS
+            **/
+.fade-in_seg-3
+  -vendor-animation-duration: 3s
+  -webkit-animation-duration: 3s
+  -moz-animation-duration: 3s
