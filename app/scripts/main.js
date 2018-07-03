@@ -68,7 +68,7 @@ const showDescription = function() {
   
   $(this).find('.js-panel-text').addClass('no-visible');
   let options = {
-    strings: ["", `<span class="js-panel panel__symbol">$</span> ${texts[panelText]}`],
+    strings: ['', `<span class="js-panel panel__symbol">$</span> ${texts[panelText]}`],
     typeSpeed: 40,
   }
   $(descriptionPanel).slideDown(() =>{
